@@ -1,16 +1,68 @@
-# React + Vite
+# 🔐 Auth + Dashboard Starter Kit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A production-ready authentication starter template built with React, Firebase, and Tailwind CSS.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- Email/Password & Google authentication
+- Password reset flow
+- Protected routes with React Router
+- User dashboard with profile info
+- Firestore integration for user data
+- Responsive Tailwind UI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Quick Start
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Install Dependencies
+
+npm install
+
+### 2. Firebase Setup
+
+Create `.env` file:
+```env
+REACT_APP_FIREBASE_API_KEY=your_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+REACT_APP_FIREBASE_APP_ID=your_app_id
+```
+
+Enable Authentication & Firestore in Firebase Console.
+
+### 3. Run
+```bash
+npm start
+```
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── Auth/          # Login, Signup, Reset pages
+│   └── Dashboard/     # Protected dashboard
+├── contexts/
+│   └── AuthContext.jsx
+├── config/
+│   └── firebase.js
+└── App.jsx
+```
+
+---
+
+## 🚢 Deployment
+
+```bash
+npm run build
+vercel deploy
+```
+
+
+**Built with ❤️ for developers**
